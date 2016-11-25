@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".classtune.MainActivity2">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar xmlns:local="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/searchTextColor"
+            android:foregroundTint="@color/Black"
+            android:minHeight="?attr/actionBarSize"
+            android:textAlignment="center"
+            android:titleTextColor="@color/colorPrimaryDark"
+            local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="MovieTune"
+                android:textColor="@color/white" />
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/container_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout">
+
+        <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/pagerSlidingTabStrip"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+
+            android:background="@color/CadetBlue"
+            android:textColor="@android:color/white"
+            app:pstsIndicatorColor="@color/white"
+            app:pstsShouldExpand="true"
+            app:pstsTextAllCaps="true" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/tabbedViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pagerSlidingTabStrip"
+            android:background="@android:color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
